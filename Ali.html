@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>The Number.isInteger() function returns true if the value is an integer.</p>
+
+    <p>Click the button to check whether the values are integers.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <p><strong>Note:</strong> The Number.isInteger() method is not supported in IE 11 (and earlier versions).</p>
+
+    <script>
+        function myFunction() {
+
+            if (Number.isInteger(123)) {
+                document.getElementById("demo").innerHTML = "nice";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,62 +1,46 @@
-(function($) {
-
-    // Breakpoints.
-    skel.breakpoints({
-        xlarge: '(max-width: 1680px)',
-        large: '(max-width: 1280px)',
-        medium: '(max-width: 980px)',
-        small: '(max-width: 736px)',
-        xsmall: '(max-width: 480px)'
-    });
-
-    $(function() {
-
-        var $window = $(window),
-            $body = $('body');
-
-        // Disable animations/transitions until the page has loaded.
-        $body.addClass('is-loading');
-
-        $window.on('load', function() {
-            window.setTimeout(function() {
-                $body.removeClass('is-loading');
-            }, 100);
-        });
-
-        // Prioritize "important" elements on medium.
-        skel.on('+medium -medium', function() {
-            $.prioritize(
-                '.important\\28 medium\\29',
-                skel.breakpoint('medium').active
-            );
-        });
-
-        // Off-Canvas Navigation.
-
-        // Navigation Panel.
-        $(
-                '<div id="navPanel">' +
-                $('#nav').html() +
-                '<a href="#navPanel" class="close"></a>' +
-                '</div>'
-            )
-            .appendTo($body)
-            .panel({
-                delay: 500,
-                hideOnClick: true,
-                hideOnSwipe: true,
-                resetScroll: true,
-                resetForms: true,
-                side: 'left'
-            });
-
-        // Fix: Remove transitions on WP<10 (poor/buggy performance).
-        if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
-            $('#navPanel')
-            .css('transition', 'none');
-
-    });
-
-})(jQuery);
-
 //Tommy
+var AHAHAHA = decodeURIComponent(window.location.search);
+AHAHAHA = AHAHAHA.substring(1);
+console.log(AHAHAHA);
+
+var firebaseConfig = {
+    apiKey: "AIzaSyBQV87ztd90KK7eB-cXccehaGQ5nBBBks4",
+    authDomain: "ict-2021.firebaseapp.com",
+    projectId: "ict-2021",
+    storageBucket: "ict-2021.appspot.com",
+    messagingSenderId: "913626041292",
+    appId: "1:913626041292:web:51a13482651e30c63fab69",
+    measurementId: "G-RRM5WNWYLK"
+};
+
+firebase.initializeApp(firebaseConfig);
+var Firestore = firebase.firestore();
+
+
+let cityReff = Firestore.collection('data').doc(AHAHAHA)
+console.log(cityReff);
+cityReff.get().then(docSnapshot => {
+    if (docSnapshot.exists) {
+        let datacc = docSnapshot.data()
+        imagedataa = datacc.Profile_picture
+        console.log("succ");
+        document.getElementById("img-fluid").src = imagedataa;
+
+    } else {
+        console.log("LOLLOLO");
+        x.style.display = "none";
+        console.log("LOLLOLO");
+    }
+})
+
+document.getElementById("navbar-brand").addEventListener("click", function() {
+
+    var senddataa = "?" + AHAHAHA;
+    window.location.href = "profile.html" + senddataa;
+})
+
+if (AHAHAHA == "") {
+    var x = document.getElementById("img-fluid");
+    x.style.display = "none";
+    console.log("LOLLOLO");
+}

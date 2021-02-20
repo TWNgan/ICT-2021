@@ -83,10 +83,8 @@ document.getElementById("submit").addEventListener("click", function() {
 
 
     if ((userNameInput != "") && (isNaN(userNoInput) === false) && (userNoInput.length === 8) && (userPasswordInput != "") && (userPassInput === userPasswordInput) && (userEngNameInput != "") && (userGenderInput != "") && (userBirthInput != "") && (userPictureInput != photo)) {
-
+        submitBtn.disabled = true
         console.log("NIce");
-        console.log(userName.value);
-        console.log(userNo.value)
 
         //Access Database
         db.doc()

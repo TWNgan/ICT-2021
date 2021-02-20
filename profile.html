@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="assets/css/register.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">註冊</a></li>
+        <li><a href="login.html">登入</a></li>
+        <li><a class="active" href="login.html">profile</a></li>
+    </ul>
+    <div class="card">
+        <img id="photocon" style="width:100%">
+    </div>
+    <div class="container">
+        <h1><b id="User Name"></b></h1>
+        <div class="textboxxx">
+
+            <div>
+                <h4>English Full Name:</h4>
+                <h3 id="EngName"></h3>
+            </div>
+            <div>
+                <h4>Gender:</h4>
+                <h3 id="genderdata"></h3>
+            </div>
+            <div>
+                <h4>Phone Number:</h4>
+                <h3 id="phoneno"></h3>
+            </div>
+            <div>
+                <h4>Date of birth:</h4>
+                <h3 id="DOB"></h3>
+            </div>
+            <div>
+                <h4>Education level:</h4>
+                <h3 id="EL"></h3>
+            </div>
+            <div>
+                <h4>Password:</h4>
+                <button id="BT" onclick="showPW()">show password</button>
+                <button id="PWW" onclick="closePW()">LOL</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+<script src="assets/js/profile.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+</html>

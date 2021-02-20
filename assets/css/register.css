@@ -26,6 +26,7 @@ form {
 h1 {
     margin: 10px 0 30px 0;
     text-align: center;
+    font-size: 3em;
 }
 
 input[type="text"],
@@ -65,7 +66,7 @@ select {
     border-radius: 2px;
 }
 
-button {
+#submit {
     padding: 19px 39px 18px 39px;
     color: #FFF;
     background-color: #4bc970;
@@ -158,4 +159,103 @@ li a:hover:not(.active) {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 30%;
+    margin: 100px 3%;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.card:hover {
+    box-shadow: 0 45px 60px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container:hover {
+    box-shadow: 0 45px 60px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 60%;
+    margin: 0px 0;
+    padding: 5% 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.textboxxx {
+    margin-left: 15%;
+}
+
+h3 {
+    display: inline;
+    font-size: 2em;
+}
+
+h4 {
+    display: inline;
+    font-size: 1.8em;
+    color: rgb(84, 90, 92);
+}
+
+#EngName {
+    margin-left: 170px;
+}
+
+#genderdata {
+    margin-left: 310px;
+}
+
+#phoneno {
+    margin-left: 211px;
+}
+
+#DOB {
+    margin-left: 242px;
+}
+
+#EL {
+    margin-left: 209px;
+}
+
+#BT {
+    padding: 8px 10px 8px 10px;
+    color: #FFF;
+    background-color: #535353;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 30%;
+    border: 1px solid #535353;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    margin-bottom: 10px;
+    margin-left: 280px;
+    display: inline;
+}
+
+#PWW {
+    padding: 5px 10px 5px 10px;
+    color: #FFF;
+    background-color: #535353;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 30%;
+    border: 1px solid #535353;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    margin-bottom: 10px;
+    margin-left: 420px;
+    display: inline;
 }

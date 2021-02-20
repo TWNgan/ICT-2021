@@ -21,7 +21,6 @@ document.getElementById("submit").addEventListener("click", function() {
         .get()
         .then(function(querySnapshot) {
             querySnapshot.forEach(function(doc) {
-                // doc.data() is never undefined for query doc snapshots
                 window.compare_noA = (doc.id);
                 console.log(compare_noA);
             });
@@ -34,7 +33,6 @@ document.getElementById("submit").addEventListener("click", function() {
         .get()
         .then(function(querySnapshot) {
             querySnapshot.forEach(function(doc) {
-                // doc.data() is never undefined for query doc snapshots
                 window.compare_noA = (doc.id);
                 console.log(compare_noA);
             });
@@ -47,7 +45,6 @@ document.getElementById("submit").addEventListener("click", function() {
         .get()
         .then(function(querySnapshot) {
             querySnapshot.forEach(function(doco) {
-                // doc.data() is never undefined for query doc snapshots
                 window.compare_noB = (doco.id);
                 console.log(compare_noB);
             });

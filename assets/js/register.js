@@ -53,13 +53,10 @@ let userLevel = document.querySelector('#level');
 const img = document.querySelector('#previewImg');
 
 function getDataUrl(img) {
-    // Create canvas
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
-    // Set width and height
     canvas.width = 1000;
     canvas.height = 1000;
-    // Draw the image
     ctx.drawImage(img, 0, 0, 1000, 1000);
     return canvas.toDataURL('image/jpeg');
 }

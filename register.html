@@ -47,14 +47,17 @@
         <input type="text" id="engname" name="user_name" required>
 
         <label for="gender">Gender:</label>
-        <input id="gender" type="radio" name="gender" value="Male">Male
-        <input id="gender" type="radio" name="gender" value="Famale">Female
-        <input id="gender" type="radio" name="gender" value="Other" required>Other
+        <select id="gender" name="user_gender" required>
+         
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+            
+          
+        </select>
 
-    </fieldset>
-    <fieldset>
         <label for="gender">Date of birth:</label>
-        <input id="Birth" type="date" name="birthday" required>
+        <input id="Birth" type="date" name="birthday" max="2010-12-31" min="1921-01-01" required>
 
         <label for="level">Education level:</label>
         <select id="level" name="user_level" required>
@@ -68,7 +71,7 @@
         </select>
 
         <label>Profile picture: (Square image)</label>
-        <input id="picture" type="file" name="photo" onchange="previewFile(this);" required>
+        <input id="picture" type="file" name="photo" accept="image/*" onchange="previewFile(this);" required>
 
 
     </fieldset>

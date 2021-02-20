@@ -51,3 +51,7 @@ function showPW() {
 function closePW() {
     location.reload();
 }
+
+document.getElementById("Homepagego").addEventListener("click", function() {
+    window.location.href = "index.html" + "?" + AHAHA;
+})
